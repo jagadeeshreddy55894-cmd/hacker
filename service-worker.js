@@ -4,7 +4,7 @@ const ASSETS = [
   "./",
   "./index.html",
   "./manifest.json",
-  "./profile.jpg",
+  "./profile.jpg", 
   "./video.mp4"
 ];
 
