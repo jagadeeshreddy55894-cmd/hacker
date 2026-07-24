@@ -338,44 +338,64 @@
             display: block;
         }
 
-        /* ===== HISTORY CARD STYLES (Bottom Sheet) ===== */
+        /* ===== HISTORY CARD STYLES (Bottom Sheet) =====
+           Redesigned to match: large centered photo, centered name,
+           then stacked Father's/Mother's/Program/Hostel info blocks,
+           all on one diagonal gradient panel. */
         .history-header {
-            background: linear-gradient(90deg, #ff8a7a, #ffd27a);
-            padding: 22px;
+            background: linear-gradient(135deg, #ff8a7a 0%, #ffd27a 100%);
+            padding: 32px 24px 30px;
             display: flex;
-            gap: 24px;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
         }
 
         .history-profile {
-            width: 90px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
         .history-profile img {
-            width: 86px;
-            height: 86px;
-            border-radius: 6px;
+            width: 190px;
+            height: 220px;
+            border-radius: 14px;
             object-fit: cover;
             background: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
         }
 
         .history-profile .name {
-            margin-top: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #000;
+            margin-top: 16px;
+            font-size: 21px;
+            font-weight: 700;
+            color: #111;
         }
 
         .history-info {
-            flex: 1;
+            width: 100%;
+            margin-top: 26px;
             color: #111;
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .history-info .info-block {
+            margin-bottom: 18px;
+        }
+
+        .history-info .info-block:last-child {
+            margin-bottom: 0;
         }
 
         .history-info b {
-            font-weight: 600;
+            display: block;
+            font-weight: 700;
+            font-size: 17px;
+            margin-bottom: 2px;
         }
 
         .history-content {
@@ -806,17 +826,22 @@
                     </div>
 
                     <div class="history-info">
-                        <b>Father's Name</b><br>
-                        Mallidi Srinivasa Reddy (9912695631)<br><br>
-
-                        <b>Mother's Name</b><br>
-                        Mallidi Sridevi (-)<br><br>
-
-                        <b>Program Name</b><br>
-                        P132:B.Tech. (Computer Science and Engineering)(2023)<br><br>
-
-                        <b>Hostel</b><br>
-                        Boys Hostel-04 - A108-Bed B (Std Non-AC 5 Seater)
+                        <div class="info-block">
+                            <b>Father's Name</b>
+                            Mallidi Srinivasa Reddy (9912695631)
+                        </div>
+                        <div class="info-block">
+                            <b>Mother's Name</b>
+                            Mallidi Sridevi (-)
+                        </div>
+                        <div class="info-block">
+                            <b>Program Name</b>
+                            P132:B.Tech. (Computer Science and Engineering)(2023)
+                        </div>
+                        <div class="info-block">
+                            <b>Hostel</b>
+                            Boys Hostel-04 - A108-Bed B (Std Non-AC 5 Seater)
+                        </div>
                     </div>
                 </div>
 
